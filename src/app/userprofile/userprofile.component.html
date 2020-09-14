@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Page</title>
+</head>
+<body>
+
+  <nav class=" container-fluid jumbotron navbar navbar-defaul">
+    <div class="navbar-header ">
+      <a href="" class="navbar-brand">Watches</a>
+      <span class="link">
+        <a class="btn btn-light " href="">Home</a>
+        <a class="btn btn-light " href="">Logout</a>
+      </span>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <h2 style="font-weight: bolder; " class="text-center text-primary">User Profile Page</h2>
+    <table class="table table-bordered table-striped table-hover" style=" color: black; margin:20px; border: 1px solid white;">
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>User age</th>
+                <th>User Phone Number</th>
+                <th>User Address</th>
+            </tr>
+        </thead>
+        <tbody>
+                <td>{{user.userName}}</td>
+                <td>{{user.userEmail}}</td>
+                <td >{{user.userAge}}</td>
+                <td >{{user.userPhoneNo}}</td>
+                <td >{{user.userAddress}}</td>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
+
+<app-footer></app-footer>

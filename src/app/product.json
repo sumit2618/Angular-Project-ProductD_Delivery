@@ -1,0 +1,76 @@
+{
+  "product": [
+    {
+      "productName": "Sonata",
+      "productPrice": 4000,
+      "productColor": "Black",
+      "productType": "Sport Watch",
+      "productQuantity": 10,
+      "productImage": "../../assets/sonata1.jpg",
+      "id": 1
+    },
+    {
+      "productName": "FastTrack",
+      "productPrice": 3000,
+      "productColor": "White",
+      "productType": "Sport Watch",
+      "productQuantity": 10,
+      "productImage": "../../assets/fasttrac.jpg",
+      "id": 2
+    },
+    {
+      "productName": "Titan",
+      "productPrice": 5000,
+      "productColor": "White",
+      "productType": "Casual Watch",
+      "productQuantity": 10,
+      "productImage": "../../assets/titan.jpg",
+      "id": 3
+    },
+    {
+      "productName": "SwiseTone",
+      "productPrice": 4500,
+      "productColor": "Black",
+      "productType": "Casual Watch",
+      "productQuantity": 10,
+      "productImage": "../../assets/swisetone.jpg",
+      "id": 4
+    },
+    {
+      "productName": "Emartos",
+      "productPrice": 2000,
+      "productColor": "Green Strap Black Dial",
+      "productType": "Sport Watch",
+      "productQuantity": 10,
+      "productImage": "../../assets/emartos.jpg",
+      "id": 5
+    },
+    {
+      "productName": "Realme",
+      "productPrice": 1000,
+      "productColor": "Black",
+      "productType": "Fitness Band Watch",
+      "productQuantity": 10,
+      "productImage": "../../assets/realme.jpg",
+      "id": 6
+    },
+    {
+      "productName": "Aurex",
+      "productPrice": 10000,
+      "productColor": "Silver",
+      "productType": "Casual Watch",
+      "productQuantity": 10,
+      "productImage": "../../assets/aurex.jpg",
+      "id": 7
+    },
+    {
+      "productName": "Fosil",
+      "productPrice": 2050,
+      "productColor": "Black",
+      "productType": "Casula",
+      "productQuantity": 12,
+      "productImage": "../../assets/fosil.jpg",
+      "id": 8
+    }
+  ]
+}

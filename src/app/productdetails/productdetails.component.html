@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+  </head>
+  <body class="bg-light">
+
+    <nav class=" container-fluid jumbotron navbar navbar-defaul">
+      <div class="navbar-header ">
+        <a href="" class="navbar-brand">Watches</a>
+        <span class="link">
+          <a class="btn btn-light " href="">Home</a>
+          <a class="btn btn-light " href="/product">Add Product</a>
+          <a class="btn btn-light " href="/log">Login</a>
+          <a class="btn btn-light " href="/reg">SignUp</a>
+        </span>
+      </div>
+    </nav>
+
+
+    <div class="container">
+<h3>Product Details  : </h3>
+
+    <div class="container-fluid row justify-content-center">
+        <div class="image-grid-container">
+          <img [src]="product.productImage" class="card-img-top" title="{{product.productName}}" height="360px">
+          <a  href="#" class="btn btn-primary btn-block">Add TO Cart</a>
+        </div>
+   </div>
+
+
+      <table class="table table-bordered table-striped table-hover" style=" color:black; margin:20px; border: 1px solid white;">
+          <thead>
+              <tr>
+                  <th >Product Name </th>
+                  <th>Product Price</th>
+                  <th>Product Color</th>
+                  <th>Product Type</th>
+                  <th>Product Quantity</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>{{product.productName}}</td>
+                  <td>{{product.productPrice}}</td>
+                  <td >{{product.productColor}}</td>
+                  <td >{{product.productType}}</td>
+                  <td >{{product.productQuantity}}</td>
+              </tr>
+          </tbody>
+      </table>
+
+      </div>
+  </body>
+  </html>
+
+  <app-footer></app-footer>

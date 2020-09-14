@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+  </head>
+  <body class="bg-light">
+
+    <nav class=" container-fluid jumbotron navbar navbar-defaul">
+      <div class="navbar-header ">
+        <a href="" class="navbar-brand">Watches</a>
+        <span class="link">
+          <a class="btn btn-light " href="">Home</a>
+          <a class="btn btn-light " href="/product">Add Product</a>
+          <a class="btn btn-light " href="/udash">User Management</a>
+          <a class="btn btn-light " href="/pdash">Product Management</a>
+          <a class="btn btn-light " href="">Logout</a>
+        </span>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid">
+      <table class="table table-bordered table-striped table-hover" style=" color: black; margin:20px; border: 1px solid white;">
+          <thead>
+
+              <tr>
+                  <th>User Name</th>
+                  <th>User Email</th>
+                  <th>User age</th>
+                  <th>User Phone Number</th>
+                  <th>User Address</th>
+                  <th>User Password</th>
+                  <th>Edit User</th>
+                  <th>Delete User</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let s of user">
+                  <td>{{s.userName}}</td>
+                  <td>{{s.userEmail}}</td>
+                  <td >{{s.userAge}}</td>
+                  <td >{{s.userPhoneNo}}</td>
+                  <td >{{s.userAddress}}</td>
+                  <td >{{s.userPassword}}</td>
+
+                  <td><a class="btn btn-info" [routerLink]="['/uu',s.id]"> Edit User </a> </td>
+
+                  <td><a class="btn btn-danger" (click)="delete(s.id)"> Delete User </a> </td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+  </body>
+  </html>
+
+  <app-footer></app-footer>
+
+
+

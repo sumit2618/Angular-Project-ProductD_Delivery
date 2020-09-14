@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+</head>
+
+<body>
+<nav class=" container-fluid jumbotron navbar navbar-defaul">
+  <div class="navbar-header ">
+    <a href="" class="navbar-brand">Watches</a>
+    <span class="link">
+
+      <a class="btn btn-light " href="">Home</a>
+      <a class="btn btn-light " href="/log">Login</a>
+      <a class="btn btn-light " href="/reg">SignUp</a>
+    </span>
+  </div>
+</nav>
+  <h2 style="text-align: center;">Signup Form</h2><br>
+  <div class="container">
+    <form [formGroup]="userForm" (ngSubmit)="register()">
+      <table class="table table-bordered bg-light  ">
+        <tr>
+          <td>
+            <div>
+              <label>User Name : </label>
+              <input class="form-control" type="text" placeholder="Enter Your Name" formControlName="userName" required>
+              <div class="alert alert-danger"
+                *ngIf="userForm.get('userName').invalid && userForm.get('userName').touched">
+                <div *ngIf="userForm.get('userName').errors.required">name is required</div>
+                <div *ngIf="userForm.get('userName').errors.pattern">name should contain characyers only </div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div>
+              <label>User Email : </label>
+              <input class="form-control" type="email" placeholder="Enter Your Email" formControlName="userEmail"
+                required>
+              <div class="alert alert-danger"
+                *ngIf="userForm.get('userEmail').invalid && userForm.get('userEmail').touched">
+                <div *ngIf="userForm.get('userEmail').errors.required">email is required</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div>
+              <label>User Age : </label>
+              <input class="form-control" type="number"  placeholder="Enter your Age"
+              formControlName="userAge" required>
+
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div>
+              <label>Phone Number : </label>
+              <input class="form-control" type="number" maxlength="10" placeholder="Enter Phone Number"
+                formControlName="userPhoneNo" required>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <label>User Address : </label>
+              <input class="form-control" type="text" placeholder="Enter Your Address" formControlName="userAddress"
+                required>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <label>User Password : </label>
+              <input class="form-control" type="text" placeholder="Enter Your password" formControlName="userPassword"
+                required>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <button class="form-control" style="margin-right: 15%;" type="submit"
+              class="btn btn-lg btn-success">Register</button>
+
+            <button class="form-control" type="reset" class="btn btn-lg btn-danger">Clear</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
+<app-footer></app-footer>

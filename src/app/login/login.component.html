@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login Form</title>
+</head>
+
+<body>
+  <nav class=" container-fluid jumbotron navbar navbar-defaul">
+    <div class="navbar-header ">
+      <a href="" class="navbar-brand">Watches</a>
+      <span class="link">
+        <a class="btn btn-light " href="">Home</a>
+        <a class="btn btn-light " href="/log">Login</a>
+        <a class="btn btn-light " href="/reg">SignUp</a>
+      </span>
+    </div>
+  </nav>
+  <div style="margin-top: 5%;" class=" container jumbotron  w-25">
+    <h3 class="text-center">Login Here</h3>
+
+    <form [formGroup]="userForm" (ngSubmit)="register()">
+      <div class="form-group  ">
+        <label for="email">Email address:</label>
+        <input type="email" placeholder="admin@123" class="form-control" formControlName="umail" id="email">
+      </div>
+      <div class="form-group ">
+        <label for="pwd">Password:</label>
+        <input type="text" placeholder="123" class="form-control" formControlName="upwd" id="pwd">
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+    </form>
+  </div>
+</body>
+
+</html>
+
+
+
+<app-footer></app-footer>

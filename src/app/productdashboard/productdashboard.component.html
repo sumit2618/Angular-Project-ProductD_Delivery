@@ -1,0 +1,54 @@
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+  </head>
+  <body class="bg-light">
+
+    <nav class=" container-fluid jumbotron navbar navbar-defaul">
+      <div class="navbar-header ">
+        <a href="" class="navbar-brand">Watches</a>
+        <span class="link">
+          <a class="btn btn-light " href="">Home</a>
+          <a class="btn btn-light " href="/product">Add Product</a>
+          <a class="btn btn-light " href="/udash">User Management</a>
+          <a class="btn btn-light " href="/pdash">Product Management</a>
+          <a class="btn btn-light " href="">Logout</a>
+        </span>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <table class="table table-bordered table-striped table-hover" style=" color:black; margin:20px; border: 1px solid white;">
+          <thead>
+              <tr>
+                  <th>Product Name </th>
+                  <th>Product Price</th>
+                  <th>Product Color</th>
+                  <th>Product Type</th>
+                  <th>Product Quantity</th>
+                  <th>Edit Product</th>
+                  <th>Delete Product</th>
+              </tr>
+          </thead>
+          <tbody>
+
+              <tr *ngFor="let s of product">
+                  <td>{{s.productName}}</td>
+                  <td>{{s.productPrice}}</td>
+                  <td >{{s.productColor}}</td>
+                  <td >{{s.productType}}</td>
+                  <td >{{s.productQuantity}}</td>
+
+                  <td><a class="btn btn-info" [routerLink]="['/up',s.id]"> Edit Product </a> </td>
+                  <td><a class="btn btn-danger" (click)="delete(s.id)"> Delete Product </a> </td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+  </body>
+  </html>
+  <app-footer></app-footer>
+
+

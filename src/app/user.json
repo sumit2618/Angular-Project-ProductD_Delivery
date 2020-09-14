@@ -1,0 +1,31 @@
+{
+  "user": [
+    {
+      "userName": "Sumit",
+      "userEmail": "s@gmail.com",
+      "userAge": 24,
+      "userPhoneNo": 8007463731,
+      "userAddress": "At. Po. Balegaon tq. Akot Dis. Akola",
+      "userPassword": "12345",
+      "id": 1
+    },
+    {
+      "userName": "Sushil",
+      "userEmail": "sus@gmail.com",
+      "userAge": 24,
+      "userPhoneNo": 8007463713,
+      "userAddress": "At. Po. Balegaon tq. Akot Dis. Akola",
+      "userPassword": "12345",
+      "id": 2
+    },
+    {
+      "userName": "Admin",
+      "userEmail": "admin@123",
+      "userAge": 24,
+      "userPhoneNo": 9998887744,
+      "userAddress": "At Po Balegaon tq. Akot Dist. Akola",
+      "userPassword": "123",
+      "id": 3
+    }
+  ]
+}

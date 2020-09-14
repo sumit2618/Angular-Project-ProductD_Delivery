@@ -1,0 +1,125 @@
+
+<!-- Product Registration -->
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+  </head>
+
+  <nav class=" container-fluid jumbotron navbar navbar-defaul">
+    <div class="navbar-header ">
+      <a href="" class="navbar-brand">Watches</a>
+      <span class="link">
+        <a class="btn btn-light " href="">Home</a>
+        <a class="btn btn-light " href="/product">Add Product</a>
+        <a class="btn btn-light " href="/udash">User Management</a>
+        <a class="btn btn-light " href="/pdash">Product Management</a>
+        <a class="btn btn-light " href="">Logout</a>
+      </span>
+    </div>
+  </nav>
+
+
+  <body >
+    <h2 style="text-align: center;">Product Registration Form</h2> <br>
+    <div>
+      <form class="container" [formGroup]="productForm" (ngSubmit)="register()">
+        <table class="table table-bordered bg-light  ">
+          <tr>
+            <td>
+              <div>
+                <label>Product Name : </label>
+
+                <input class="form-control" type="text" placeholder="Enter Product Name" formControlName="productName"
+                  required>
+                <div class="alert alert-danger"
+                  *ngIf="productForm.get('productName').invalid && productForm.get('productName').touched">
+                  <div *ngIf="productForm.get('productName').errors.required">Product Name is required</div>
+                  <div *ngIf="productForm.get('productName').errors.pattern">Product Name should contain characyers only </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+         <tr>
+            <td>
+              <div>
+                <label>Price Of Product :  </label>
+                <input class="form-control" type="number" placeholder="Enter Price of Product" formControlName="productPrice"
+                  required>
+              </div>
+             </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div>
+                <label>Quantity of Product :  </label>
+                <input class="form-control" type="number" placeholder="Enter Quantity of Product" formControlName="productQuantity"
+                  required>
+              </div>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>
+              <div>
+                <label>Type Of Product :   </label>
+                <input class="form-control" type="text" placeholder="Enter Type Of product" formControlName="productType"
+                  required>
+                <div class="alert alert-danger"
+                  *ngIf="productForm.get('productType').invalid && productForm.get('productType').touched">
+                  <div *ngIf="productForm.get('productType').errors.required">Type is required</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div>
+                <label>Color Of Product : </label>
+                <input class="form-control" type="text" placeholder="Enter Color Of Product" formControlName="productColor"
+                  required>
+                <div class="alert alert-danger"
+                  *ngIf="productForm.get('productColor').invalid && productForm.get('productColor').touched">
+                  <div *ngIf="productForm.get('productColor').errors.required">Product Color is required</div>
+                </div>
+              </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                 <label>Enter Path for image : </label>
+                <input class="form-control" type="text" placeholder="../../assets/sonata1.jpg " formControlName="productImage"
+                  required>
+<!--
+                  <label for="img">Select image:</label>
+                  <input type="file" id="img" name="img" accept="image/*"> -->
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button class="form-control" style="margin-right: 15%;" type="submit"
+                class="btn btn-lg btn-success">Register</button>
+
+              <button class="form-control" type="reset" class="btn btn-lg btn-danger">Clear</button>
+            </td>
+          </tr>
+
+        </table>
+      </form>
+    </div>
+  </body>
+  </html>
+  <app-footer></app-footer>
+
+
